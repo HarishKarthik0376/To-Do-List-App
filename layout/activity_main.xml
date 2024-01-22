@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="#132226">
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+  android:id="@+id/relativelayou1">
+
+    <TextView
+        android:id="@+id/todilisttext"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="40dp"
+        android:layout_marginLeft="147dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginRight="-100dp"
+        android:layout_toEndOf="@+id/logoutbtn"
+        android:text="To-Do-List"
+        android:textColor="#F2EAED"
+        android:textSize="25sp"
+        android:textStyle="bold" />
+
+    <ImageView
+        android:id="@+id/profileimage"
+        android:layout_width="50dp"
+        android:layout_height="54dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginStart="52dp"
+        android:layout_marginTop="9dp"
+        android:layout_marginRight="-7dp"
+        android:layout_toEndOf="@+id/todilisttext"
+        android:src="@drawable/baseline_account_circle_24" />
+
+    <com.google.android.material.button.MaterialButton
+      android:layout_width="97dp"
+      android:layout_height="37dp"
+      android:layout_alignParentLeft="true"
+      android:layout_alignParentTop="true"
+      android:layout_marginLeft="11dp"
+      android:layout_marginTop="15dp"
+      android:background="@drawable/logout"
+      android:text="LOGOUT"
+        android:textColor="@color/white"
+      android:id="@+id/logoutbtn"
+      android:textSize="11.7sp"
+      app:backgroundTint="#ED6161" />
+</RelativeLayout>
+ <RelativeLayout
+     android:layout_width="match_parent"
+     android:layout_height="wrap_content"
+     android:id="@+id/relativelayout2"
+      android:layout_below="@+id/relativelayou1"
+     android:layout_marginTop="10dp"
+   >
+
+     <TextView
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:layout_centerHorizontal="true"
+         android:layout_marginTop="5dp"
+         android:text="Priority Tasks"
+         android:id="@+id/todaystask"
+         android:textColor="#A4978E"
+         android:textSize="30sp"
+         android:visibility="invisible"
+         android:textStyle="bold" />
+
+     <TextView
+         android:id="@+id/addnewtask"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:layout_centerHorizontal="true"
+         android:layout_marginTop="5dp"
+         android:text="Add A Task"
+         android:textColor="#A4978E"
+         android:textSize="30sp"
+         android:textStyle="bold" />
+
+     <androidx.recyclerview.widget.RecyclerView
+         android:id="@+id/horizontalrecylerview"
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+         android:layout_below="@+id/todaystask"
+         android:layout_marginTop="23dp"
+         android:orientation="horizontal" />
+ </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/relativelayout3"
+        android:layout_below="@+id/relativelayout2"
+        android:layout_marginTop="20dp">
+
+        <TextView
+            android:id="@+id/othertasks"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_toEndOf="@+id/horizontalrecylerview"
+            android:paddingBottom="5dp"
+            android:text="Other Tasks"
+            android:textColor="#BE9063"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            android:visibility="invisible"
+            tools:ignore="NotSibling" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/verticalrecylcerview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/othertasks"
+            android:layout_marginTop="35dp" />
+    </RelativeLayout>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/addfb"
+        android:layout_width="60dp"
+        android:layout_height="70dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="20dp"
+        android:src="@drawable/addicon"
+        app:backgroundTint="#B5C1B4" />
+
+</RelativeLayout>
